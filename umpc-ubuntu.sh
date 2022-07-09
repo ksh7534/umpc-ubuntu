@@ -45,7 +45,7 @@ function inject_data() {
 function enable_umpc_config() {
   # NOTE! Do not inject this configuration anymore. The defaults are sane.
   # Enable Intel SNA, DRI1/3 and TearFree.
-  # inject_data "${INTEL_CONF}"
+  inject_data "${INTEL_CONF}"
 
   # Rotate the monitor.
   inject_data "${MONITOR_CONF}"
@@ -108,9 +108,9 @@ function enable_umpc_config() {
       systemctl restart iio-sensor-proxy.service
 
       # Display Scaler
-      inject_data "/usr/bin/umpc-display-scaler"
-      inject_data "/etc/xdg/autostart/umpc-display-scaler.desktop"
-      inject_data "/usr/share/applications/umpc-display-scaler.desktop"
+      #inject_data "/usr/bin/umpc-display-scaler"
+      #inject_data "/etc/xdg/autostart/umpc-display-scaler.desktop"
+      #inject_data "/usr/share/applications/umpc-display-scaler.desktop"
       ;;
     gpd-p2-max)
       # Increase console font size
